@@ -1,0 +1,50 @@
+.game-console {
+    position: absolute; /* Position the game console absolutely */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Offset by 50% to center correctly */
+    z-index: 1000; /* Ensure it appears above other elements */
+    background-color: white; /* Background color for the console */
+    padding: 20px;
+    border: 3px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Add some shadow for depth */
+    width: 400px; /* Set a reasonable width */
+    text-align: center; /* Center text inside the console */
+}
+
+.game-info {
+    text-align: left; /* Align text to the left */
+    font-size: 16px; /* Readable font size */
+    margin-bottom: 10px; /* Space between lines */
+}
+
+.game-info p {
+    margin: 5px 0; /* Margin for spacing between paragraphs */
+    font-family: Arial, sans-serif; /* Consistent font style */
+}
+
+.answer-input {
+    width: 50px;
+    margin-left: 10px;
+    padding: 5px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.submit-answer-button {
+    margin-top: 10px;
+    padding: 5px 10px;
+    font-size: 16px;
+    color: white;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-answer-button:hover {
+    background-color: #45a049;
+}

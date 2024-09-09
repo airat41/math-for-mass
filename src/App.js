@@ -5,18 +5,12 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <h1>Multiplication table from 1 to 9</h1>
+        <h2>Just press the equation buttons</h2>
+        <h2>and answers pop up!</h2>
+        <div className="parent-container">
+          <MultiplicationMachine/>
+        </div>
       </header>
     </div>
   );

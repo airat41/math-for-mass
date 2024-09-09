@@ -1,0 +1,124 @@
+/* MultiplicationMachine.css */
+.multiplication-machine {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Vertically center the content */
+    /* Add extra space at the bottom */
+    padding: 20px 20px 20px;
+    border: 3px solid #ccc;
+    border-radius: 15px;
+    background-color: #ffea17;
+    width: 700px; /* Adjust width to fit larger buttons */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* 3D shadow for the container */
+    margin: 20px 40px 680px;
+}
+
+h2 {
+    font-family: Arial, sans-serif;
+    margin-bottom: 20px;
+    font-size: 24px; /* Larger font size for the title */
+}
+
+.equation-grid {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    gap: 10px; /* Increase gap for better spacing */
+}
+
+.equation-button {
+    width: 60px;
+    height: 60px;
+    position: relative;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: normal; /* Default weight for the button text */
+    border: 2px solid #ddd;
+    background-color: #e0e0e0;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 6px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* 3D shadow for the cells */
+}
+
+
+.equation-text {
+    margin-bottom: 30px; /* Space for the input field */
+}
+
+/* Style for the input field within the button */
+.equation-button input.answer-input {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Style for highlighted buttons */
+.equation-button.highlighted {
+    background-color: orange;
+    color: white;
+    border-color: orangered;
+}
+
+/* Style for feedback messages */
+.feedback {
+    margin-top: 20px;
+    font-weight: bold;
+    color: green; /* Default feedback color for correct answers */
+}
+
+.feedback.incorrect {
+    color: red; /* Color for incorrect answers */
+}
+
+
+.equation-button:hover {
+    background-color: #d0d0d0;
+}
+
+.bold-text {
+    font-family: "Georgia Pro Cond Semibold", serif;
+    font-weight: bold;
+    font-size: 26px;
+}
+
+.operator {
+    font-weight: normal;
+}
+
+.revealed {
+    font-family: "Georgia Pro Cond Semibold", serif;
+    font-weight: bold;
+    font-size: 26px;
+    background-color: deepskyblue; /* Highlight color for correct answer */
+    color: white;
+}
+
+.play-game-button {
+    margin-top: 20px;
+    padding: 10px 10px;
+    font-size: 18px;
+    color: white;
+    background-color: #4CAF50; /* Green color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.play-game-button:hover {
+    background-color: #45a049;
+}
+
+.multiplication-machine-container {
+    display: flex; /* Display the machine and console side by side */
+    align-items: flex-start; /* Align items to the top */
+    gap: 20px; /* Space between the machine and the console */
+}
