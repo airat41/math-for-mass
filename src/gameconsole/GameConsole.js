@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import './GameConsole.css'; // Import the CSS for styling the game console
 
 const GameConsole = ({ onGameEnd }) => {
-    const [timer, setTimer] = useState(60); // Timer set to 60 seconds
+    const [timer, setTimer] = useState(30); // Timer set to 60 seconds
     const [score, setScore] = useState(0); // Track the score
     const [message, setMessage] = useState('Game started!'); // Initial message
     const [currentEquation, setCurrentEquation] = useState({ num1: 1, num2: 1, answer: 1 }); // Current equation
