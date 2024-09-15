@@ -11,6 +11,7 @@
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Add some shadow for depth */
     width: 400px; /* Set a reasonable width */
     text-align: center; /* Center text inside the console */
+    color: #282c34;
 }
 
 .game-info {
