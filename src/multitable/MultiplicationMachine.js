@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './MultiplicationMachine.css'; // Import the CSS for styling
 import GameConsole from '../gameconsole/GameConsole'; // Import the GameConsole component
 
@@ -13,6 +13,7 @@ const MultiplicationMachine = () => {
     const [revealed, setRevealed] = useState({});
     const [isPlaying, setIsPlaying] = useState(false); // Track game mode
     const [feedback, setFeedback] = useState(''); // Track feedback for the user
+    const [isMobile, setIsMobile] = useState(window.innerWidth <= 480); // State to track if it's mobile
 
     // Function to handle button clicks
     const handleClick = (index) => {
@@ -31,15 +32,27 @@ const MultiplicationMachine = () => {
         setFeedback('');
     };
 
+    // Handle window resizing for mobile view
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth <= 480); // Update state when screen size changes
+        };
+
+        window.addEventListener('resize', handleResize);
+        return () => {
+            window.removeEventListener('resize', handleResize); // Cleanup the event listener
+        };
+    }, []);
+
     return (
         <div className="multiplication-machine-container">
-            <div className="multiplication-machine">
+            <div className={`multiplication-machine ${isMobile ? 'mobile' : 'desktop'}`}>
                 <h2>Multiplication Machine</h2>
-                <div className="equation-grid">
+                <div className={`equation-grid ${isMobile ? 'mobile-grid' : ''}`}>
                     {equations.map((eq, index) => (
                         <div
                             key={index}
-                            className={`equation-button ${revealed[index] ? 'revealed' : ''} `}
+                            className={`equation-button ${revealed[index] ? 'revealed' : ''}`}
                             onClick={() => handleClick(index)}
                         >
                             <div className="equation-text">
