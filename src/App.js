@@ -1,19 +1,19 @@
 import './App.css';
+import {BrowserRouter as Router, Route, Routes} from 'react-router-dom'
 import MultiplicationMachine from "./multitable/MultiplicationMachine";
+import Home from "./home/Home";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Multiplication table from 1 to 9</h1>
-        <h1>Just press the equation buttons</h1>
-        <h1>and answers pop up!</h1>
-        <div className="parent-container">
-          <MultiplicationMachine/>
-        </div>
-      </header>
-    </div>
-  );
+    return (
+        < Router>
+            < div className="App">
+                <Routes>
+                    <Route exact path="/" element={<Home/>}></Route>
+                    <Route path="/multiplication-machine" element={<MultiplicationMachine/>}></Route>
+                </Routes>
+            < /div>
+        </Router>
+    );
 }
 
 export default App;
